@@ -7,21 +7,27 @@
   <label for="title_field">Title</label>
   <input id="title_field" type="text" name="the_title">
 </div>
+
+<div>
   <label for="year_field">Year</label>
   <input id="year_field" type="text" name="the_year">
 </div>
+
 <div>
   <label for="duration_field">Duration</label>
   <input id="duration_field" type="text" name="the_duration">
 </div>
+
 <div>
   <label for="description_field">Description</label>
   <input id="description_field" type="text" name="the_description">
 </div>
+
 <div>
   <label for="image_field">Image</label>
   <input id="image_field" type="text" name="the_image">
 </div>
+
 <div>
   <label for="Director_ID_field">Director ID</label>
   <input id="Director_ID_field" type="text" name="the_director_id">
@@ -87,10 +93,10 @@
 
       <<% if the_director == nil %>
         Uh oh! We weren't able to find a director for this movie!
-      <% else %>>
+      <% else %>
       <%= the_director.name%>
       
-      <% end %>>
+      <% end %>
     </td>
 
     <td>

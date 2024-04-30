@@ -11,13 +11,14 @@
 </div>
 
 <hr>
-<form action="/modifty_movie_record <%= @the_movie.id>" method = "post">
+<form action="/modify_movie_record <%= @the_movie.id>" method = "post">
 <div>
   <label for="title_field">Title</label>
   <input id="title_field" type="text" name="the_title" value= "<%= @the_movie.title %>">
 </div>
+<div>
   <label for="year_field">Year</label>
-  <input id="year_field" type="text" name="the_year" value= "<%= @the_movie.field %>">
+  <input id="year_field" type="text" name="the_year" value= "<%= @the_movie.year %>">
 </div>
 <div>
   <label for="duration_field">Duration</label>
@@ -40,9 +41,7 @@
 
 </form>
 
-
-
-</hr>
+<hr>
 
 
 <hr>

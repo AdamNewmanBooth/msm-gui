@@ -32,7 +32,7 @@ class MoviesController < ApplicationController
 
     m.save
 
-    Redirect_to("/movies")
+    redirect_to("/movies")
   end
   
   def destroy
@@ -42,7 +42,7 @@ class MoviesController < ApplicationController
     the_movie = matching_records.at(0)
     the_movie.destroy
 
-    Redirect_to(/movies)
+    redirect_to("/movies")
   end
   
   def index
