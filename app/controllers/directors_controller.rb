@@ -1,19 +1,17 @@
 class DirectorsController < ApplicationController
   def update
     
-    params.fetch("the_id")
+    d_id = params.fetch("the_id")
   
-    matching records = Director.where({ :id => a_id})
+    matching_records = Director.where({ :id => d_id})
     the_director = matching_records.at(0)
     
-    the_director = matching_records.at(0)
     
-    d.id = params.fetch("the_id")
-    d.image = params.fetch("the_image")
-    d.name = params.fetch("the_name")
-    d.dob = params.fetch("the_dob")
-    d.bio = params.fetch("the_bio")
-
+    the_director.name = params.fetch("the_name")
+    the_directord.dob = params.fetch("the_dob")
+    the_director.bio = params.fetch("the_bio")
+    the_director.image = params.fetch("the_image")
+   
     the_director.save
   
     redirect_to("/directors/#{the_director.id}")
@@ -22,11 +20,10 @@ class DirectorsController < ApplicationController
     def create
     
       d=Director.new
-      d.id = params.fetch("the_id")
-      d.image = params.fetch("the_image")
       d.name = params.fetch("the_name")
       d.dob = params.fetch("the_dob")
       d.bio = params.fetch("the_bio")
+      d.image = params.fetch("the_image")
   
       d.save
   

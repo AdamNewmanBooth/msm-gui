@@ -1,19 +1,17 @@
 class MoviesController < ApplicationController
   
   def update
-  params.fetch("the_id")
+  m_id = params.fetch("the_id")
 
-  matching records = Movie.where({ :id => m_id})
+  matching_records = Movie.where({ :id => m_id})
   the_movie = matching_records.at(0)
   
-  the_movie = matching_records.at(0)
-  
-  m.title = params.fetch("the_title")
-  m.year = params.fetch("the_year")
-  m.duration = params.fetch("the_duration")
-  m.description = params.fetch("the_description")
-  m.image = params.fetch("the_image")
-  m.the_director_id = params.fetch("the_director_id")
+  the_movie.title = params.fetch("the_title")
+  the_movie.year = params.fetch("the_year")
+  the_movie.duration = params.fetch("the_duration")
+  the_movie.description = params.fetch("the_description")
+  the_movie.image = params.fetch("the_image")
+  the_movie.the_director_id = params.fetch("the_director_id")
 
   the_movie.save
 
