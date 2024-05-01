@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
   the_movie.duration = params.fetch("the_duration")
   the_movie.description = params.fetch("the_description")
   the_movie.image = params.fetch("the_image")
-  the_movie.the_director_id = params.fetch("the_director_id")
+  the_movie.director_id = params.fetch("the_director_id")
 
   the_movie.save
 
@@ -26,7 +26,7 @@ class MoviesController < ApplicationController
     m.duration = params.fetch("the_duration")
     m.description = params.fetch("the_description")
     m.image = params.fetch("the_image")
-    m.the_director_id = params.fetch("the_director_id")
+    m.director_id = params.fetch("the_director_id")
 
     m.save
 
